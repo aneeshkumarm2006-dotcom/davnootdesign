@@ -1,0 +1,595 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Davnoot Digital - Full-Stack Growth Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "on-primary-container": "#858384",
+                        "on-surface-variant": "#46464a",
+                        "surface-dim": "#dadada",
+                        "on-surface": "#1a1c1c",
+                        "surface-bright": "#f9f9f9",
+                        "primary-fixed-dim": "#c8c6c7",
+                        "inverse-primary": "#c8c6c7",
+                        "background": "#f9f9f9",
+                        "on-tertiary-container": "#848388",
+                        "secondary-container": "#6860ef",
+                        "tertiary-fixed-dim": "#c7c6cb",
+                        "secondary-fixed": "#e3dfff",
+                        "on-primary-fixed": "#1c1b1c",
+                        "on-secondary": "#ffffff",
+                        "ink": "#0B0B0C",
+                        "on-secondary-fixed-variant": "#372abf",
+                        "primary-fixed": "#e5e2e3",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#1a1b1f",
+                        "primary": "#000000",
+                        "outline-variant": "#c7c6ca",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#1c1b1c",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#46464b",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#474647",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#e3e2e7",
+                        "tertiary": "#000000",
+                        "on-secondary-container": "#fffbff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-error": "#ffffff",
+                        "background-alt": "#F5F5F3",
+                        "outline": "#77777b",
+                        "hairline": "#E7E7E3",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary-fixed": "#1a1b1f",
+                        "on-background": "#1a1c1c",
+                        "inverse-surface": "#2f3131",
+                        "secondary": "#4e45d5",
+                        "surface-container-low": "#f3f3f4",
+                        "on-secondary-fixed": "#100069",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "surface": "#f9f9f9",
+                        "surface-tint": "#5f5e5f",
+                        "indigo": "#4338CA"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "2xl": "1rem"
+                    },
+                    spacing: {
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "stack-sm": "12px",
+                        "stack-md": "24px",
+                        "margin-edge": "48px"
+                    },
+                    fontFamily: {
+                        "display-xl-mobile": ["Space Grotesk"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "metric-lg": ["JetBrains Mono"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "display-xl": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"]
+                    },
+                    fontSize: {
+                        "display-xl-mobile": ["48px", { lineHeight: "52px", letterSpacing: "-0.03em", fontWeight: "700" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "metric-lg": ["32px", { lineHeight: "40px", fontWeight: "400" }],
+                        "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "500" }],
+                        "headline-lg-mobile": ["32px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "label-caps": ["12px", { lineHeight: "16px", letterSpacing: "0.1em", fontWeight: "500" }],
+                        "display-xl": ["80px", { lineHeight: "88px", letterSpacing: "-0.04em", fontWeight: "700" }],
+                        "headline-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Minimalist animations */
+        .reveal-staged {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .reveal-staged.is-revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+        .delay-300 { transition-delay: 0.3s; }
+        .delay-400 { transition-delay: 0.4s; }
+
+        .hairline-draw {
+            width: 0;
+            transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .hairline-draw.is-revealed {
+            width: 100%;
+        }
+        
+        .hover-underline {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hover-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s ease-in-out;
+        }
+        
+        .hover-underline:hover::after {
+            width: 100%;
+        }
+        
+        .btn-primary {
+            @apply inline-flex items-center justify-center px-6 py-3 bg-ink text-on-primary font-body-md text-body-md transition-colors duration-300 hover:bg-secondary;
+        }
+        
+        .btn-ghost {
+            @apply inline-flex items-center justify-center px-6 py-3 border border-hairline text-ink font-body-md text-body-md transition-colors duration-300 hover:border-secondary hover:text-secondary;
+        }
+        
+        .text-balance {
+            text-wrap: balance;
+        }
+
+        /* Accordion */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s ease;
+        }
+        .accordion-btn.active + .accordion-content {
+            max-height: 300px;
+            padding-top: 1rem;
+            padding-bottom: 1.5rem;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-btn.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .shader-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            opacity: 0.15;
+            pointer-events: none;
+            mix-blend-mode: multiply;
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-ink font-body-md antialiased selection:bg-secondary selection:text-white relative">
+<!-- TopNavBar Shared Component -->
+<header class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-hairline dark:border-outline-variant transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center w-full px-margin-edge py-stack-sm max-w-screen-2xl mx-auto">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md font-bold tracking-tight text-ink dark:text-surface-bright" href="#">Davnoot</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-300 hover-underline" href="#services">Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-300 hover-underline" href="#work">Work</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-300 hover-underline" href="#about">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-300 hover-underline" href="#insights">Insights</a>
+</nav>
+<!-- CTA -->
+<div class="flex items-center">
+<a class="btn-primary hidden md:inline-flex" href="#contact">Book a strategy call</a>
+<!-- Mobile Menu Button -->
+<button class="md:hidden p-2 text-ink">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="relative">
+<!-- Hero Section -->
+<section class="pt-32 pb-section-gap px-margin-edge max-w-screen-2xl mx-auto overflow-hidden relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 md:col-start-1">
+<div class="mb-stack-md reveal-staged is-revealed">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Full-stack growth agency</span>
+</div>
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-balance mb-stack-md reveal-staged delay-100 is-revealed">
+                        Be found everywhere your customers search — including AI.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mb-12 reveal-staged delay-200 is-revealed">
+                        Davnoot Digital combines SEO, paid media, email, and custom software to turn attention into measurable growth. Strategy, execution, and the engineering behind it — under one roof.
+                    </p>
+<div class="flex flex-wrap gap-4 reveal-staged delay-300 is-revealed">
+<a class="btn-primary" href="#contact">Book a strategy call</a>
+<a class="btn-ghost" href="#services">Explore services</a>
+</div>
+</div>
+<div class="md:col-span-5 md:col-start-8 mt-16 md:mt-0 reveal-staged delay-400 is-revealed">
+<img alt="Minimalist editorial workspace with laptop and growth architect's notebook — Davnoot Digital full-stack growth agency" class="w-full h-auto object-cover aspect-[4/5] object-center rounded-sm shadow-sm" src="images/seo-services.png" width="800" height="1000" fetchpriority="high" decoding="async">
+</div>
+</div>
+<!-- Trust Strip -->
+<div class="mt-32 md:mt-48 pt-stack-md border-t border-transparent relative z-10">
+<div class="absolute top-0 left-0 h-px bg-ink hairline-draw reveal-staged delay-300 is-revealed"></div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter font-label-caps text-label-caps text-on-surface-variant reveal-staged delay-400 is-revealed">
+<div class="flex items-center gap-2">
+<span class="text-secondary">•</span> Avg 3.2× ROAS
+                    </div>
+<div class="flex items-center gap-2">
+<span class="text-secondary">•</span> Top-3 Google rankings in 90 days
+                    </div>
+<div class="flex items-center gap-2">
+<span class="text-secondary">•</span> 4.9/5 client rating
+                    </div>
+<div class="flex items-center gap-2">
+<span class="text-secondary">•</span> 120+ campaigns shipped
+                    </div>
+</div>
+</div>
+</section>
+<!-- Global Reach Section -->
+<section class="py-section-gap px-margin-edge bg-surface-container-lowest max-w-screen-2xl mx-auto relative z-10">
+<div class="text-center mb-16 reveal-staged is-revealed">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4">Global Reach, Local Impact</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Scaling brands across borders with localized strategies and global infrastructure.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 reveal-staged delay-100 is-revealed">
+<div class="p-6 border border-hairline rounded-sm text-center">
+<div class="font-metric-lg text-metric-lg text-ink mb-2">12+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Countries Reached</div>
+</div>
+<div class="p-6 border border-hairline rounded-sm text-center">
+<div class="font-metric-lg text-metric-lg text-ink mb-2">$50M+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Client Revenue Driven</div>
+</div>
+<div class="p-6 border border-hairline rounded-sm text-center">
+<div class="font-metric-lg text-metric-lg text-ink mb-2">5</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Global Hubs</div>
+</div>
+<div class="p-6 border border-hairline rounded-sm text-center">
+<div class="font-metric-lg text-metric-lg text-ink mb-2">24/7</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Campaign Monitoring</div>
+</div>
+</div>
+</section>
+<!-- Stacked Services Section -->
+<section class="py-section-gap px-margin-edge bg-background-alt max-w-screen-2xl mx-auto relative z-10" id="services">
+<div class="mb-16 md:mb-24 text-center reveal-staged is-revealed">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-tight">Services</h2>
+</div>
+<div class="space-y-0 pb-32">
+<!-- Service Card 01 -->
+<div class="sticky top-0 min-h-screen bg-surface-container-lowest border-b border-hairline z-10 flex items-center reveal-staged transition-all duration-500 is-revealed hover:bg-surface-container-low">
+<div class="flex flex-col md:flex-row w-full h-full">
+<div class="w-full md:w-1/2 p-8 md:p-16 lg:p-24 flex flex-col justify-center">
+<div class="font-metric-lg text-metric-lg text-secondary mb-6">01</div>
+<h3 class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg mb-6">SEO</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Dominate search. Drive organic growth.</p>
+<div class="h-px w-full bg-hairline my-6"></div>
+<p class="font-body-md text-body-md text-surface-tint mb-6">Technical audits, Keyword strategy, On-page optimization, Link building, Local SEO, Monthly reporting.</p>
+<p class="text-sm text-on-surface-variant mb-8">Our technical SEO foundation ensures your site is perfectly indexable, while our content strategy builds topical authority to capture high-intent search traffic.</p>
+<div class="mt-auto pt-8">
+<a class="font-label-caps text-label-caps hover:text-ink transition-colors inline-flex items-center gap-1 uppercase tracking-widest text-secondary-container" href="#seo-details">View details <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<div class="w-full md:w-1/2 bg-surface-variant relative min-h-[300px] md:min-h-screen">
+<img alt="Technical SEO audit dashboard showing keyword rankings, backlink graph, and site health score — Davnoot Digital SEO services" class="absolute inset-0 w-full h-full object-cover object-center" src="images/seo-services.png" width="960" height="1080" loading="lazy" decoding="async">
+</div>
+</div>
+</div>
+<!-- Service Card 02 -->
+<div class="sticky top-0 min-h-screen bg-surface-container-lowest border-b border-hairline z-20 flex items-center reveal-staged transition-all duration-500 is-revealed hover:bg-surface-container-low">
+<div class="flex flex-col md:flex-row w-full h-full">
+<div class="w-full md:w-1/2 p-8 md:p-16 lg:p-24 flex flex-col justify-center">
+<div class="font-metric-lg text-metric-lg text-secondary mb-6">02</div>
+<h3 class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg mb-6">Meta Ads</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Precision targeting. Scalable revenue.</p>
+<div class="h-px w-full bg-hairline my-6"></div>
+<p class="font-body-md text-body-md text-surface-tint mb-6">Campaign strategy, Audience research, Ad creative, A/B testing, Retargeting, ROI optimization.</p>
+<p class="text-sm text-on-surface-variant mb-8">We leverage advanced machine learning combined with compelling creative to acquire customers profitably at scale across Facebook and Instagram.</p>
+<div class="mt-auto pt-8">
+<a class="font-label-caps text-label-caps hover:text-ink transition-colors inline-flex items-center gap-1 uppercase tracking-widest text-secondary-container" href="#meta-ads-details">View details <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<div class="w-full md:w-1/2 bg-surface-variant relative min-h-[300px] md:min-h-screen">
+<img alt="Meta Ads campaign dashboard showing Facebook and Instagram ad performance metrics, ROAS chart, and audience targeting — Davnoot Digital paid media services" class="absolute inset-0 w-full h-full object-cover object-center" src="images/meta-ads-services.png" width="960" height="1080" loading="lazy" decoding="async">
+</div>
+</div>
+</div>
+<!-- Service Card 03 -->
+<div class="sticky top-0 min-h-screen bg-surface-container-lowest border-b border-hairline z-30 flex items-center reveal-staged transition-all duration-500 is-revealed hover:bg-surface-container-low">
+<div class="flex flex-col md:flex-row w-full h-full">
+<div class="w-full md:w-1/2 p-8 md:p-16 lg:p-24 flex flex-col justify-center">
+<div class="font-metric-lg text-metric-lg text-secondary mb-6">03</div>
+<h3 class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg mb-6">Email Marketing</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Nurture leads. Convert. Build loyalty.</p>
+<div class="h-px w-full bg-hairline my-6"></div>
+<p class="font-body-md text-body-md text-surface-tint mb-6">Strategy &amp; copy, Segmentation, Automated drip campaigns, Newsletter design, Performance analytics.</p>
+<p class="text-sm text-on-surface-variant mb-8">Turn your list into your most profitable asset with hyper-personalized flows and campaigns designed for maximum engagement and retention.</p>
+<div class="mt-auto pt-8">
+<a class="font-label-caps text-label-caps hover:text-ink transition-colors inline-flex items-center gap-1 uppercase tracking-widest text-secondary-container" href="#email-details">View details <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<div class="w-full md:w-1/2 bg-surface-variant relative min-h-[300px] md:min-h-screen">
+<img alt="Email marketing automation flow with segmentation diagram, open-rate metrics, and drip campaign sequence — Davnoot Digital email marketing services" class="absolute inset-0 w-full h-full object-cover object-center" src="images/email-marketing-services.png" width="960" height="1080" loading="lazy" decoding="async">
+</div>
+</div>
+</div>
+<!-- Service Card 04 -->
+<div class="sticky top-0 min-h-screen bg-surface-container-lowest border-b border-hairline z-40 flex items-center reveal-staged transition-all duration-500 is-revealed hover:bg-surface-container-low">
+<div class="flex flex-col md:flex-row w-full h-full">
+<div class="w-full md:w-1/2 p-8 md:p-16 lg:p-24 flex flex-col justify-center">
+<div class="font-metric-lg text-metric-lg text-secondary mb-6">04</div>
+<h3 class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg mb-6">AI SEO</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">The future of search, powered by AI.</p>
+<div class="h-px w-full bg-hairline my-6"></div>
+<p class="font-body-md text-body-md text-surface-tint mb-6">AI content optimization, Schema &amp; structured data, Featured snippets, Voice search, AI Overviews strategy.</p>
+<p class="text-sm text-on-surface-variant mb-8">Future-proof your visibility by optimizing for Generative Engine Optimization (GEO) and ensuring your brand is cited by major LLMs.</p>
+<div class="mt-auto pt-8">
+<a class="font-label-caps text-label-caps hover:text-ink transition-colors inline-flex items-center gap-1 uppercase tracking-widest text-secondary-container" href="#ai-seo-details">View details <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<div class="w-full md:w-1/2 bg-surface-variant relative min-h-[300px] md:min-h-screen">
+<img alt="Abstract AI SEO visualization showing neural network connections, AI Overview optimization, and structured data schema — Davnoot Digital GEO and AI SEO services" class="absolute inset-0 w-full h-full object-cover object-center" src="images/ai-seo-services.png" width="960" height="1080" loading="lazy" decoding="async">
+</div>
+</div>
+</div>
+<!-- Service Card 05 -->
+<div class="sticky top-0 min-h-screen bg-surface-container-lowest border-b border-hairline z-50 flex items-center reveal-staged transition-all duration-500 is-revealed hover:bg-surface-container-low">
+<div class="flex flex-col md:flex-row w-full h-full">
+<div class="w-full md:w-1/2 p-8 md:p-16 lg:p-24 flex flex-col justify-center">
+<div class="font-metric-lg text-metric-lg text-secondary mb-6">05</div>
+<h3 class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg mb-6">ChatGPT Ads</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Be found where AI answers. First.</p>
+<div class="h-px w-full bg-hairline my-6"></div>
+<p class="font-body-md text-body-md text-surface-tint mb-6">AI platform presence, Prompt-visibility strategy, LLM citation &amp; authority, Answer-engine advertising.</p>
+<p class="text-sm text-on-surface-variant mb-8">Pioneer the new frontier of advertising by positioning your solutions directly within AI conversational interfaces and answer engines.</p>
+<div class="mt-auto pt-8">
+<a class="font-label-caps text-label-caps hover:text-ink transition-colors inline-flex items-center gap-1 uppercase tracking-widest text-secondary-container" href="#chatgpt-ads-details">View details <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<div class="w-full md:w-1/2 bg-surface-variant relative min-h-[300px] md:min-h-screen">
+<img alt="ChatGPT conversational AI interface showing brand citation in AI-generated answer, prompt visibility strategy — Davnoot Digital ChatGPT ads and answer-engine advertising" class="absolute inset-0 w-full h-full object-cover object-center" src="images/chatgpt-ads-services.png" width="960" height="1080" loading="lazy" decoding="async">
+</div>
+</div>
+</div>
+<!-- Service Card 06 -->
+<div class="sticky top-0 min-h-screen bg-surface-container-lowest border-b border-hairline z-[60] flex items-center reveal-staged transition-all duration-500 is-revealed hover:bg-surface-container-low">
+<div class="flex flex-col md:flex-row w-full h-full">
+<div class="w-full md:w-1/2 p-8 md:p-16 lg:p-24 flex flex-col justify-center">
+<div class="font-metric-lg text-metric-lg text-secondary mb-6">06</div>
+<h3 class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg mb-6">Custom Software</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Built for your business. Engineered to scale.</p>
+<div class="h-px w-full bg-hairline my-6"></div>
+<p class="font-body-md text-body-md text-surface-tint mb-6">Web apps, CRM &amp; ERP systems, API integrations, Analytics dashboards, Automation pipelines.</p>
+<p class="text-sm text-on-surface-variant mb-8">Bespoke engineering solutions that bridge the gap between marketing and operations, creating proprietary advantages for your business.</p>
+<div class="mt-auto pt-8">
+<a class="font-label-caps text-label-caps hover:text-ink transition-colors inline-flex items-center gap-1 uppercase tracking-widest text-secondary-container" href="#custom-software-details">View details <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<div class="w-full md:w-1/2 bg-surface-variant relative min-h-[300px] md:min-h-screen">
+<img alt="Custom software dashboard with CRM integration diagram, API endpoint map, and analytics pipeline visualization — Davnoot Digital custom web app and software engineering services" class="absolute inset-0 w-full h-full object-cover object-center" src="images/custom-software-services.png" width="960" height="1080" loading="lazy" decoding="async">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Expanded Process / Why Davnoot Section -->
+<section class="py-section-gap px-margin-edge bg-surface-container-lowest max-w-screen-2xl mx-auto border-t border-transparent relative pb-32" id="why-davnoot">
+<div class="absolute top-0 left-0 h-px bg-hairline hairline-draw reveal-staged is-revealed"></div>
+<div class="text-center mb-16 reveal-staged is-revealed">
+<h2 class="font-display-xl-mobile md:font-headline-lg text-display-xl-mobile md:text-headline-lg tracking-tight mb-4 text-balance">The Davnoot Advantage</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">A rigorous, multi-disciplinary approach to modern growth.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal-staged delay-200 is-revealed">
+<div class="p-8 bg-background-alt rounded-lg">
+<div class="w-12 h-12 bg-ink text-white flex items-center justify-center rounded-full mb-6 font-metric-lg">1</div>
+<h3 class="font-headline-md text-headline-md mb-4">Audit &amp; Architect</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We don't start with tactics. We start with a comprehensive audit of your technical infrastructure, market position, and current funnels to identify the highest-leverage opportunities.</p>
+</div>
+<div class="p-8 bg-background-alt rounded-lg">
+<div class="w-12 h-12 bg-ink text-white flex items-center justify-center rounded-full mb-6 font-metric-lg">2</div>
+<h3 class="font-headline-md text-headline-md mb-4">Execute &amp; Engineer</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Strategy means nothing without flawless execution. Our cross-functional teams deploy campaigns alongside the necessary technical integrations to ensure seamless data flow and user experience.</p>
+</div>
+<div class="p-8 bg-background-alt rounded-lg">
+<div class="w-12 h-12 bg-ink text-white flex items-center justify-center rounded-full mb-6 font-metric-lg">3</div>
+<h3 class="font-headline-md text-headline-md mb-4">Analyze &amp; Amplify</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Using custom attribution models, we continuously analyze performance data. We kill what isn't working and ruthlessly scale the campaigns driving actual revenue growth.</p>
+</div>
+</div>
+</section>
+<!-- Data-Driven Strategy Section -->
+<section class="py-section-gap px-margin-edge bg-background-alt max-w-screen-2xl mx-auto border-t border-transparent relative border-hairline" id="strategy">
+<div class="absolute top-0 left-0 h-px bg-hairline hairline-draw reveal-staged is-revealed"></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 reveal-staged is-revealed">
+<img alt="Data-driven growth analytics dashboard showing upward trending revenue chart, campaign attribution model, and real-time KPI tracking — Davnoot Digital performance strategy" class="w-full h-auto object-cover rounded-sm aspect-[4/3] shadow-sm" src="images/ai-seo-services.png" width="800" height="600" loading="lazy" decoding="async">
+</div>
+<div class="md:col-span-5 md:col-start-8 reveal-staged delay-200 mt-12 md:mt-0 is-revealed">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-stack-md text-balance tracking-tight">
+                    Data-Driven Strategy
+                </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-lg">
+                    We don't guess. We measure, analyze, and iterate. Every campaign is backed by rigorous analytics and performance tracking to ensure maximum ROI and sustainable growth.
+                </p>
+<ul class="space-y-4 mb-10 font-body-md text-body-md text-ink">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">check</span> Advanced tracking implementation</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">check</span> Custom attribution modeling</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">check</span> Real-time performance dashboards</li>
+</ul>
+<a class="btn-ghost" href="#about">Learn about our methodology</a>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-gap px-margin-edge bg-surface-container-lowest max-w-screen-2xl mx-auto border-t border-transparent relative">
+<div class="absolute top-0 left-0 h-px bg-hairline hairline-draw reveal-staged is-revealed"></div>
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-16 reveal-staged is-revealed">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4 tracking-tight">Common Questions</h2>
+</div>
+<div class="space-y-4 reveal-staged delay-100 is-revealed">
+<div class="border-b border-hairline pb-4">
+<button class="accordion-btn w-full flex justify-between items-center py-4 text-left font-headline-md text-lg focus:outline-none">
+<span class="">How does AI SEO differ from traditional SEO?</span>
+<span class="material-symbols-outlined accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content font-body-md text-on-surface-variant">
+<p class="">While traditional SEO focuses on ranking in blue links, AI SEO (or GEO) optimizes for inclusion in AI Overviews and conversational engine responses (like ChatGPT). It requires a stronger focus on semantic relationships, deep topical authority, and specific structured data formats that LLMs prefer to ingest.</p>
+</div>
+</div>
+<div class="border-b border-hairline pb-4">
+<button class="accordion-btn w-full flex justify-between items-center py-4 text-left font-headline-md text-lg focus:outline-none">
+<span class="">Do you offer custom software integration for marketing stacks?</span>
+<span class="material-symbols-outlined accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content font-body-md text-on-surface-variant">
+<p class="">Yes. Our full-stack engineering team frequently builds custom middleware, custom CRM integrations, and tailored analytics dashboards to bridge the gap between off-the-shelf marketing tools and your specific operational needs.</p>
+</div>
+</div>
+<div class="border-b border-hairline pb-4">
+<button class="accordion-btn w-full flex justify-between items-center py-4 text-left font-headline-md text-lg focus:outline-none">
+<span class="">What is your typical engagement structure?</span>
+<span class="material-symbols-outlined accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content font-body-md text-on-surface-variant">
+<p class="">We typically work on a retainer basis, starting with an intensive 30-day "Audit &amp; Architect" phase, followed by ongoing monthly execution, engineering, and optimization sprints.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap px-margin-edge bg-background-alt max-w-screen-2xl mx-auto border-t border-transparent text-center relative">
+<div class="absolute top-0 left-0 h-px bg-hairline hairline-draw reveal-staged is-revealed"></div>
+<div class="reveal-staged is-revealed">
+<h2 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl mb-stack-md text-balance mx-auto max-w-4xl tracking-tight">
+                Ready to grow? Let's talk.
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                Get a custom strategy tailored to your business goals.
+            </p>
+<a class="btn-primary text-lg px-8 py-4" href="#contact">Book your consultation</a>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="w-full border-t border-hairline dark:border-outline-variant bg-surface-container-lowest transition-opacity duration-200">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-edge py-section-gap max-w-screen-2xl mx-auto">
+<div class="md:col-span-4 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-md text-headline-md font-bold text-ink dark:text-surface-bright mb-4">Davnoot</h4>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mb-8">
+                        Strategy, execution, and engineering for modern growth.
+                    </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-auto">
+                    © 2024 Davnoot Agency. All rights reserved.
+                </p>
+</div>
+<div class="md:col-span-2 md:col-start-7">
+<h5 class="font-label-caps text-label-caps text-ink mb-6">Navigation</h5>
+<ul class="space-y-4 font-body-md text-body-md">
+<li class=""><a class="text-on-surface-variant dark:text-surface-variant hover:text-ink dark:hover:text-surface-bright transition-colors duration-300" href="#services">Services</a></li>
+<li class=""><a class="text-on-surface-variant dark:text-surface-variant hover:text-ink dark:hover:text-surface-bright transition-colors duration-300" href="#work">Work</a></li>
+<li class=""><a class="text-on-surface-variant dark:text-surface-variant hover:text-ink dark:hover:text-surface-bright transition-colors duration-300" href="#about">About</a></li>
+<li class=""><a class="text-on-surface-variant dark:text-surface-variant hover:text-ink dark:hover:text-surface-bright transition-colors duration-300" href="#insights">Insights</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-caps text-label-caps text-ink mb-6">Legal</h5>
+<ul class="space-y-4 font-body-md text-body-md">
+<li class=""><a class="text-on-surface-variant dark:text-surface-variant hover:text-ink dark:hover:text-surface-bright transition-colors duration-300" href="#privacy">Privacy Policy</a></li>
+<li class=""><a class="text-on-surface-variant dark:text-surface-variant hover:text-ink dark:hover:text-surface-bright transition-colors duration-300" href="#terms">Terms of Service</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-caps text-label-caps text-ink mb-6">Contact</h5>
+<ul class="space-y-4 font-body-md text-body-md">
+<li class=""><a class="text-on-surface-variant hover:text-ink transition-colors duration-300" href="mailto:hello@davnoot.com">hello@davnoot.com</a></li>
+<li class="">
+<a class="inline-flex items-center gap-1 text-on-surface-variant hover:text-ink transition-colors duration-300" href="#">
+                            LinkedIn <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Intersection Observer for Scroll Reveals
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -50px 0px',
+                threshold: 0.1
+            };
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const animatedElements = document.querySelectorAll('.reveal-staged, .hairline-draw');
+            animatedElements.forEach(el => {
+                revealObserver.observe(el);
+            });
+
+            // Trigger immediate reveal for hero elements
+            setTimeout(() => {
+                const heroElements = document.querySelectorAll('.pt-32 .reveal-staged');
+                heroElements.forEach(el => el.classList.add('is-revealed'));
+            }, 100);
+
+            // Accordion Logic
+            const accordions = document.querySelectorAll('.accordion-btn');
+            accordions.forEach(acc => {
+                acc.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+
+
+</body></html>
