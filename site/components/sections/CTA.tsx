@@ -37,7 +37,7 @@ export default function CTA() {
     >
       {/* Returning blob — lower intensity than the hero (§5.8), centered behind. */}
       <div className="pointer-events-none absolute inset-0 -z-0 flex items-center justify-center">
-        <div className="relative h-[90vw] w-[90vw] max-w-[820px] opacity-70 md:h-[60vw] md:w-[60vw]">
+        <div className="relative h-full w-full opacity-70">
           <div
             aria-hidden
             className="absolute inset-0 transition-opacity duration-1000 ease-out-expo"
