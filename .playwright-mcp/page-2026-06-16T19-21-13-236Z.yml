@@ -1,0 +1,366 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Davnoot" [ref=e4] [cursor=pointer]:
+        - /url: "#top"
+      - navigation [ref=e5]:
+        - link "Work" [ref=e6] [cursor=pointer]:
+          - /url: "#work"
+        - link "Services" [ref=e7] [cursor=pointer]:
+          - /url: "#services"
+        - link "Approach" [ref=e8] [cursor=pointer]:
+          - /url: "#approach"
+        - link "Contact" [ref=e9] [cursor=pointer]:
+          - /url: "#contact"
+      - link "Start a project" [ref=e10] [cursor=pointer]:
+        - /url: "#contact"
+        - generic: Start a project
+  - main [ref=e11]:
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - heading "We grow brands across search, social & software." [level=1] [ref=e14]:
+          - generic [ref=e15]:
+            - generic [ref=e18]: We
+            - generic [ref=e21]: grow
+            - generic [ref=e24]: brands
+            - generic [ref=e27]: across
+            - generic [ref=e30]: search,
+            - generic [ref=e33]: social
+            - generic [ref=e36]: "&"
+            - generic [ref=e39]: software.
+        - paragraph [ref=e40]: A full-stack growth studio working between Raipur and Montreal.
+        - link "Start a project" [ref=e42] [cursor=pointer]:
+          - /url: "#contact"
+          - generic: Start a project
+      - generic:
+        - generic: Scroll
+    - region "Trusted to deliver" [ref=e43]:
+      - heading "Trusted to deliver" [level=2] [ref=e44]
+      - generic:
+        - generic: Trusted to deliver
+      - generic [ref=e46]:
+        - list [ref=e47]:
+          - listitem [ref=e48]: SEO
+          - listitem [ref=e49]: ·
+          - listitem [ref=e50]: Meta Ads
+          - listitem [ref=e51]: ·
+          - listitem [ref=e52]: Email
+          - listitem [ref=e53]: ·
+          - listitem [ref=e54]: AI SEO
+          - listitem [ref=e55]: ·
+          - listitem [ref=e56]: Custom Software
+          - listitem [ref=e57]: ·
+          - listitem [ref=e58]: SEO
+          - listitem [ref=e59]: ·
+          - listitem [ref=e60]: Meta Ads
+          - listitem [ref=e61]: ·
+          - listitem [ref=e62]: Email
+          - listitem [ref=e63]: ·
+          - listitem [ref=e64]: AI SEO
+          - listitem [ref=e65]: ·
+          - listitem [ref=e66]: Custom Software
+          - listitem [ref=e67]: ·
+          - listitem [ref=e68]: SEO
+          - listitem [ref=e69]: ·
+          - listitem [ref=e70]: Meta Ads
+          - listitem [ref=e71]: ·
+          - listitem [ref=e72]: Email
+          - listitem [ref=e73]: ·
+          - listitem [ref=e74]: AI SEO
+          - listitem [ref=e75]: ·
+          - listitem [ref=e76]: Custom Software
+          - listitem [ref=e77]: ·
+          - listitem [ref=e78]: SEO
+          - listitem [ref=e79]: ·
+          - listitem [ref=e80]: Meta Ads
+          - listitem [ref=e81]: ·
+          - listitem [ref=e82]: Email
+          - listitem [ref=e83]: ·
+          - listitem [ref=e84]: AI SEO
+          - listitem [ref=e85]: ·
+          - listitem [ref=e86]: Custom Software
+          - listitem [ref=e87]: ·
+        - list [ref=e89]:
+          - listitem [ref=e90]: SEO
+          - listitem [ref=e91]: ·
+          - listitem [ref=e92]: Meta Ads
+          - listitem [ref=e93]: ·
+          - listitem [ref=e94]: Email
+          - listitem [ref=e95]: ·
+          - listitem [ref=e96]: AI SEO
+          - listitem [ref=e97]: ·
+          - listitem [ref=e98]: Custom Software
+          - listitem [ref=e99]: ·
+          - listitem [ref=e100]: SEO
+          - listitem [ref=e101]: ·
+          - listitem [ref=e102]: Meta Ads
+          - listitem [ref=e103]: ·
+          - listitem [ref=e104]: Email
+          - listitem [ref=e105]: ·
+          - listitem [ref=e106]: AI SEO
+          - listitem [ref=e107]: ·
+          - listitem [ref=e108]: Custom Software
+          - listitem [ref=e109]: ·
+          - listitem [ref=e110]: SEO
+          - listitem [ref=e111]: ·
+          - listitem [ref=e112]: Meta Ads
+          - listitem [ref=e113]: ·
+          - listitem [ref=e114]: Email
+          - listitem [ref=e115]: ·
+          - listitem [ref=e116]: AI SEO
+          - listitem [ref=e117]: ·
+          - listitem [ref=e118]: Custom Software
+          - listitem [ref=e119]: ·
+          - listitem [ref=e120]: SEO
+          - listitem [ref=e121]: ·
+          - listitem [ref=e122]: Meta Ads
+          - listitem [ref=e123]: ·
+          - listitem [ref=e124]: Email
+          - listitem [ref=e125]: ·
+          - listitem [ref=e126]: AI SEO
+          - listitem [ref=e127]: ·
+          - listitem [ref=e128]: Custom Software
+          - listitem [ref=e129]: ·
+    - region "Services" [ref=e130]:
+      - generic [ref=e131]:
+        - generic [ref=e133]:
+          - generic [ref=e134]:
+            - generic [ref=e135]: 01 / 05
+            - heading "SEO" [level=2] [ref=e136]
+            - paragraph [ref=e137]: Compounding organic growth that outlasts ad budgets.
+          - img [ref=e139]
+        - generic [ref=e148]:
+          - generic [ref=e149]:
+            - generic [ref=e150]: 02 / 05
+            - heading "Meta Ads" [level=2] [ref=e151]
+            - paragraph [ref=e152]: Paid social that finds buyers, not just impressions.
+          - img [ref=e154]
+        - generic [ref=e168]:
+          - generic [ref=e169]:
+            - generic [ref=e170]: 03 / 05
+            - heading "Email" [level=2] [ref=e171]
+            - paragraph [ref=e172]: Owned-audience revenue on autopilot.
+          - img [ref=e174]
+        - generic [ref=e179]:
+          - generic [ref=e180]:
+            - generic [ref=e181]: 04 / 05
+            - heading "AI SEO" [level=2] [ref=e182]
+            - paragraph [ref=e183]: Get cited by ChatGPT, Perplexity, and AI Overviews.
+          - img [ref=e185]
+        - generic [ref=e189]:
+          - generic [ref=e190]:
+            - generic [ref=e191]: 05 / 05
+            - heading "Custom Software" [level=2] [ref=e192]
+            - paragraph [ref=e193]: When off-the-shelf can't, we build it.
+          - img [ref=e195]
+    - region "Results that close deals." [ref=e203]:
+      - paragraph [ref=e205]: Selected work
+      - heading "Results that close deals." [level=2] [ref=e207]
+      - list [ref=e208]:
+        - listitem [ref=e209]:
+          - link "01 Project Placeholder +XXX% organic traffic SEO" [ref=e210] [cursor=pointer]:
+            - /url: /work/placeholder-project-one
+            - generic [ref=e211]:
+              - generic [ref=e212]: "01"
+              - generic [ref=e213]: Project Placeholder
+            - generic [ref=e214]: +XXX% organic traffic
+            - generic [ref=e215]: SEO
+        - listitem [ref=e216]:
+          - link "02 Project Placeholder X.Xx ROAS Meta Ads" [ref=e217] [cursor=pointer]:
+            - /url: /work/placeholder-project-two
+            - generic [ref=e218]:
+              - generic [ref=e219]: "02"
+              - generic [ref=e220]: Project Placeholder
+            - generic [ref=e221]: X.Xx ROAS
+            - generic [ref=e222]: Meta Ads
+        - listitem [ref=e223]:
+          - link "03 Project Placeholder +XXX% list revenue Email" [ref=e224] [cursor=pointer]:
+            - /url: /work/placeholder-project-three
+            - generic [ref=e225]:
+              - generic [ref=e226]: "03"
+              - generic [ref=e227]: Project Placeholder
+            - generic [ref=e228]: +XXX% list revenue
+            - generic [ref=e229]: Email
+      - paragraph [ref=e230]: Placeholder metrics — real case studies coming soon.
+    - region "How we turn audits into compounding growth." [ref=e231]:
+      - paragraph [ref=e233]: Approach
+      - heading "How we turn audits into compounding growth." [level=2] [ref=e235]
+      - generic [ref=e236]:
+        - img [ref=e237]
+        - list [ref=e238]:
+          - listitem [ref=e239]:
+            - text: "01"
+            - heading "Audit" [level=3] [ref=e241]
+            - paragraph [ref=e242]: We find what's leaking and what's working.
+          - listitem [ref=e243]:
+            - text: "02"
+            - heading "Strategy" [level=3] [ref=e245]
+            - paragraph [ref=e246]: A plan tied to revenue, not vanity metrics.
+          - listitem [ref=e247]:
+            - text: "03"
+            - heading "Build" [level=3] [ref=e249]
+            - paragraph [ref=e250]: Pages, campaigns, and software that ship fast.
+          - listitem [ref=e251]:
+            - text: "04"
+            - heading "Grow" [level=3] [ref=e253]
+            - paragraph [ref=e254]: We measure, iterate, and compound the wins.
+    - region "Impact by the numbers" [ref=e255]:
+      - list [ref=e256]:
+        - listitem [ref=e257]:
+          - generic [ref=e258]: "{{N}}"
+          - generic [ref=e259]: Clients
+        - listitem [ref=e260]:
+          - generic [ref=e261]: "{{$N}}"
+          - generic [ref=e262]: Revenue driven
+        - listitem [ref=e263]:
+          - generic [ref=e264]: "{{N}}%"
+          - generic [ref=e265]: Avg traffic lift
+        - listitem [ref=e266]:
+          - generic [ref=e267]: "{{N}}"
+          - generic [ref=e268]: Projects shipped
+      - paragraph [ref=e269]: Placeholder figures — real impact numbers coming soon.
+    - region [ref=e270]:
+      - paragraph [ref=e272]: Two cities, one studio.
+      - heading "We work where you are — across India and North America." [level=2] [ref=e273]:
+        - generic [ref=e274]:
+          - generic [ref=e277]: We
+          - generic [ref=e280]: work
+          - generic [ref=e283]: where
+          - generic [ref=e286]: you
+          - generic [ref=e289]: are
+          - generic [ref=e292]: —
+          - generic [ref=e295]: across
+          - generic [ref=e298]: India
+          - generic [ref=e301]: and
+          - generic [ref=e304]: North
+          - generic [ref=e307]: America.
+      - paragraph [ref=e309]: From Raipur to Montreal, we run growth and build software around the clock, so momentum never sleeps.
+      - generic [ref=e310]:
+        - img [ref=e311]
+        - generic [ref=e315]:
+          - generic [ref=e316]: Raipur, IN
+          - generic [ref=e317]: Montreal, QC
+    - region "Let's grow." [ref=e318]:
+      - generic [ref=e319]:
+        - heading "Let's grow." [level=2] [ref=e320]:
+          - generic [ref=e321]:
+            - generic [ref=e324]: Let's
+            - generic [ref=e327]: grow.
+        - generic [ref=e328]:
+          - link "Start a project" [ref=e329] [cursor=pointer]:
+            - /url: "#contact"
+            - generic: Start a project
+          - generic [ref=e330]:
+            - link "info@davnoot.com" [ref=e331] [cursor=pointer]:
+              - /url: mailto:info@davnoot.com
+            - link "+1 (438) 223-7131" [ref=e332] [cursor=pointer]:
+              - /url: tel:+14382237131
+            - generic [ref=e333]: Montreal, QC · Raipur, IN
+  - contentinfo [ref=e334]:
+    - generic [ref=e337]:
+      - list [ref=e338]:
+        - listitem [ref=e339]: SEO
+        - listitem [ref=e340]: ·
+        - listitem [ref=e341]: Meta Ads
+        - listitem [ref=e342]: ·
+        - listitem [ref=e343]: Email
+        - listitem [ref=e344]: ·
+        - listitem [ref=e345]: AI SEO
+        - listitem [ref=e346]: ·
+        - listitem [ref=e347]: Custom Software
+        - listitem [ref=e348]: ·
+        - listitem [ref=e349]: SEO
+        - listitem [ref=e350]: ·
+        - listitem [ref=e351]: Meta Ads
+        - listitem [ref=e352]: ·
+        - listitem [ref=e353]: Email
+        - listitem [ref=e354]: ·
+        - listitem [ref=e355]: AI SEO
+        - listitem [ref=e356]: ·
+        - listitem [ref=e357]: Custom Software
+        - listitem [ref=e358]: ·
+        - listitem [ref=e359]: SEO
+        - listitem [ref=e360]: ·
+        - listitem [ref=e361]: Meta Ads
+        - listitem [ref=e362]: ·
+        - listitem [ref=e363]: Email
+        - listitem [ref=e364]: ·
+        - listitem [ref=e365]: AI SEO
+        - listitem [ref=e366]: ·
+        - listitem [ref=e367]: Custom Software
+        - listitem [ref=e368]: ·
+        - listitem [ref=e369]: SEO
+        - listitem [ref=e370]: ·
+        - listitem [ref=e371]: Meta Ads
+        - listitem [ref=e372]: ·
+        - listitem [ref=e373]: Email
+        - listitem [ref=e374]: ·
+        - listitem [ref=e375]: AI SEO
+        - listitem [ref=e376]: ·
+        - listitem [ref=e377]: Custom Software
+        - listitem [ref=e378]: ·
+      - list [ref=e380]:
+        - listitem [ref=e381]: SEO
+        - listitem [ref=e382]: ·
+        - listitem [ref=e383]: Meta Ads
+        - listitem [ref=e384]: ·
+        - listitem [ref=e385]: Email
+        - listitem [ref=e386]: ·
+        - listitem [ref=e387]: AI SEO
+        - listitem [ref=e388]: ·
+        - listitem [ref=e389]: Custom Software
+        - listitem [ref=e390]: ·
+        - listitem [ref=e391]: SEO
+        - listitem [ref=e392]: ·
+        - listitem [ref=e393]: Meta Ads
+        - listitem [ref=e394]: ·
+        - listitem [ref=e395]: Email
+        - listitem [ref=e396]: ·
+        - listitem [ref=e397]: AI SEO
+        - listitem [ref=e398]: ·
+        - listitem [ref=e399]: Custom Software
+        - listitem [ref=e400]: ·
+        - listitem [ref=e401]: SEO
+        - listitem [ref=e402]: ·
+        - listitem [ref=e403]: Meta Ads
+        - listitem [ref=e404]: ·
+        - listitem [ref=e405]: Email
+        - listitem [ref=e406]: ·
+        - listitem [ref=e407]: AI SEO
+        - listitem [ref=e408]: ·
+        - listitem [ref=e409]: Custom Software
+        - listitem [ref=e410]: ·
+        - listitem [ref=e411]: SEO
+        - listitem [ref=e412]: ·
+        - listitem [ref=e413]: Meta Ads
+        - listitem [ref=e414]: ·
+        - listitem [ref=e415]: Email
+        - listitem [ref=e416]: ·
+        - listitem [ref=e417]: AI SEO
+        - listitem [ref=e418]: ·
+        - listitem [ref=e419]: Custom Software
+        - listitem [ref=e420]: ·
+    - generic [ref=e421]:
+      - generic [ref=e422]:
+        - generic [ref=e423]:
+          - link "Davnoot" [ref=e424] [cursor=pointer]:
+            - /url: "#top"
+          - paragraph [ref=e425]: A full-stack growth studio working between Raipur and Montreal.
+        - navigation "Footer" [ref=e426]:
+          - link "Work" [ref=e427] [cursor=pointer]:
+            - /url: "#work"
+          - link "Services" [ref=e428] [cursor=pointer]:
+            - /url: "#services"
+          - link "Approach" [ref=e429] [cursor=pointer]:
+            - /url: "#approach"
+          - link "Contact" [ref=e430] [cursor=pointer]:
+            - /url: "#contact"
+        - generic [ref=e431]:
+          - link "LinkedIn" [ref=e432] [cursor=pointer]:
+            - /url: "#"
+          - link "info@davnoot.com" [ref=e433] [cursor=pointer]:
+            - /url: mailto:info@davnoot.com
+      - generic: DAVNOOT
+      - generic [ref=e434]:
+        - generic [ref=e435]: © 2026 Davnoot Digital.
+        - generic [ref=e436]: Made between Raipur & Montreal.

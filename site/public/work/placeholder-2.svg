@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" fill="none">
+  <rect width="640" height="480" fill="#E8ECFF"/>
+  <rect x="0.5" y="0.5" width="639" height="479" fill="none" stroke="#1B3CFF" stroke-opacity="0.15"/>
+  <!-- audience cluster forming (Meta Ads) -->
+  <circle cx="320" cy="248" r="120" stroke="#1B3CFF" stroke-opacity="0.3" stroke-width="2" fill="none"/>
+  <circle cx="320" cy="248" r="64" stroke="#1B3CFF" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <circle cx="320" cy="248" r="16" fill="#1B3CFF"/>
+  <circle cx="232" cy="200" r="8" fill="#1B3CFF"/>
+  <circle cx="412" cy="216" r="8" fill="#1B3CFF"/>
+  <circle cx="392" cy="316" r="8" fill="#1B3CFF"/>
+  <circle cx="256" cy="312" r="8" fill="#1B3CFF"/>
+  <circle cx="448" cy="152" r="6" fill="#1B3CFF" fill-opacity="0.6"/>
+  <circle cx="196" cy="288" r="6" fill="#1B3CFF" fill-opacity="0.6"/>
+  <text x="64" y="72" font-family="monospace" font-size="20" letter-spacing="3" fill="#1B3CFF" fill-opacity="0.7">PLACEHOLDER · META ADS</text>
+</svg>

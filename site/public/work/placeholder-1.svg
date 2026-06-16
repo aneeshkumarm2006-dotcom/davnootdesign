@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" fill="none">
+  <rect width="640" height="480" fill="#E8ECFF"/>
+  <rect x="0.5" y="0.5" width="639" height="479" fill="none" stroke="#1B3CFF" stroke-opacity="0.15"/>
+  <!-- rising graph line (SEO) -->
+  <path d="M64 392 L208 320 L320 344 L456 200 L576 120" stroke="#1B3CFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="64" cy="392" r="9" fill="#1B3CFF"/>
+  <circle cx="208" cy="320" r="9" fill="#1B3CFF"/>
+  <circle cx="320" cy="344" r="9" fill="#1B3CFF"/>
+  <circle cx="456" cy="200" r="9" fill="#1B3CFF"/>
+  <circle cx="576" cy="120" r="9" fill="#1B3CFF"/>
+  <line x1="64" y1="424" x2="576" y2="424" stroke="#1B3CFF" stroke-opacity="0.25" stroke-width="2"/>
+  <text x="64" y="72" font-family="monospace" font-size="20" letter-spacing="3" fill="#1B3CFF" fill-opacity="0.7">PLACEHOLDER · SEO</text>
+</svg>
