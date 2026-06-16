@@ -32,7 +32,7 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-[100svh] items-center overflow-hidden">
       {/* Blob — absolute, behind the type, bleeding off the right edge */}
-      <div className="pointer-events-none absolute inset-y-0 right-0 -z-0 w-[78vw] translate-x-[12%] md:w-[62vw] lg:w-[55vw]">
+      <div className="pointer-events-none absolute inset-0 -z-0 w-full">
         {/* Static wash placeholder — paints instantly, no JS, no layout shift */}
         <div
           aria-hidden

@@ -76,13 +76,12 @@ export const fragmentShader = /* glsl */ `
     float md = length(toM);
     warp += toM * (0.25 * uHover) * exp(-md * 1.8);
 
-    // soft metaball
-    float d = length(warp);
-    float blob = smoothstep(0.62, 0.02, d);
-
+    // organic ink spread across the whole field (not a centered metaball)
     float n = fbm(warp * 1.8 + t * 1.3);
-    blob *= 0.5 + 0.8 * n;
-    blob = clamp(blob, 0.0, 1.0);
+    float field = smoothstep(0.22, 0.72, n);
+    // fade only at the outer borders so the ink melts into the paper
+    vec2 fade = smoothstep(0.0, 0.16, vUv) * smoothstep(1.0, 0.84, vUv);
+    float blob = clamp(field * fade.x * fade.y, 0.0, 1.0);
 
     // color ramp: --cobalt body → --cobalt-soft highlight
     vec3 cobalt = vec3(0.106, 0.235, 1.0);
